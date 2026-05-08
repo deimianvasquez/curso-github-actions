@@ -1,5 +1,8 @@
+import os
+
 def main():
-    print("Hola ¿qué tal?")
+    name = os.getenv("USERNAME", "Usuario")
+    print(f"Hola ¿qué tal, {name}? Te saluda Python.")
 
 
 if __name__ == "__main__":

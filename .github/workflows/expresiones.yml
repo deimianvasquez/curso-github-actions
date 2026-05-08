@@ -1,0 +1,27 @@
+name: Expresiones regulares
+run-name: ¡Estoy aprendiendo a usar expresiones regulares en GitHub Actions!
+on:
+  workflow_dispatch:
+    inputs:
+      edad:
+        description: '¿Cuál es tu edad?'
+        required: true
+        type: integer
+      nombre:
+        description: '¿Cuál es tu nombre?'
+        required: true
+        type: string
+        default: 'Desconocido'
+jobs:
+  mayor:
+    if ${{ inputs.edad >= 18 }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: correr el script
+        run: echo "Hola ${{ inputs.nombre }}, eres mayor de edad."
+  menor:
+    if ${{ inputs.edad < 18 }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: correr el script
+        run: echo "Hola ${{ inputs.nombre }}, eres menor de edad."

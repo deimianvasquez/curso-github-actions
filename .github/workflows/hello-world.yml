@@ -1,4 +1,5 @@
 name: Aprendiendo GitHub Actions
+run-name: ¡estoy aprendiendo GitHub Actions!
 on: [push]
 jobs:
   build:

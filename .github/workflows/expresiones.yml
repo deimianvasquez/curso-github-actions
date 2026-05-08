@@ -14,13 +14,13 @@ on:
         default: 'Desconocido'
 jobs:
   mayor:
-    if ${{ inputs.edad >= 18 }}
+    if: ${{ inputs.edad >= 18 }}
     runs-on: ubuntu-latest
     steps:
       - name: correr el script
         run: echo "Hola ${{ inputs.nombre }}, eres mayor de edad."
   menor:
-    if ${{ inputs.edad < 18 }}
+    if: ${{ inputs.edad < 18 }}
     runs-on: ubuntu-latest
     steps:
       - name: correr el script
